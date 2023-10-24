@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizando Links</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: darkred;
+        }
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+        }
+        .especial {
+            background-color: rgb(207, 110, 110);
+            
+        }
+
+        .especial::before {
+            content: ' ⇒	';
+            text-decoration: none;
+         font-weight: normal;
+        }
+        
+        a.especial::after {
+            content: ' ⇐ ' ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>    
+    <ul>
+        <li><a href="https://open.spotify.com/intl-pt/artist/1BG0qhiHURtAo77MnRrDGD" target="_blank">Tostes Spotify</a></li>
+        <li><a href="https://www.youtube.com/c/AlessandroTostes" class="especial">Canal do Youtube</a></li>
+        <li><a href="https://www.facebook.com/Alessandro.Tostes.Arruda.Junior/?locale=pt_BR" class="especial">Facebbok</a></li>
+    </ul>
+</body>
+</html>
